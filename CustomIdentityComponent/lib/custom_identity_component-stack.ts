@@ -255,10 +255,10 @@ export class CustomIdentityComponentStack extends Stack {
         },],true);
 
     // Attach the Web Application Firewall with the standard AWS provided rule set and the rate limit rule
-    new wafv2.CfnWebACLAssociation(this,'ApiGatewayWebACLAssociation',{
+    /*new wafv2.CfnWebACLAssociation(this,'ApiGatewayWebACLAssociation',{
       resourceArn: api_gateway.deploymentStage.stageArn,
       webAclArn:cfnWebACLManaged.attrArn,
-    });
+    });*/
 
     // Request validator for the API
     const requestValidator = new apigw.RequestValidator(this, 'CustomIdentityApiRequestValidator', {
