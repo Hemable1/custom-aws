@@ -180,7 +180,7 @@ export class CustomIdentityComponentStack extends Stack {
     });
 
     // Define a Web Application Firewall with the standard AWS provided rule set
-    const cfnWebACLManaged = new wafv2.CfnWebACL(this,'CustomIdentityWebACLRules',{
+    /*const cfnWebACLManaged = new wafv2.CfnWebACL(this,'CustomIdentityWebACLRules',{
             defaultAction: {
               allow: {}
             },
@@ -228,7 +228,7 @@ export class CustomIdentityComponentStack extends Stack {
                 sampledRequestsEnabled: true,
               }
             }]
-    });
+    });*/
 
     // Define an API Gateway for the authentication component public endpoint
     const logGroup = new logs.LogGroup(this, "CustomIdentityAPiAccessLogs",
